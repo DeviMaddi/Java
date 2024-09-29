@@ -243,6 +243,32 @@ Serialization in Java is the process of converting an object into a byte stream,
 - This allows you to persist the state of an object, enabling you to retrieve it later. 
 
 
+What happens if the static modifier is not included in the main method signature in Java?
+There wouldn't be any compilation error. But then the program is run, since the JVM cant map the main method signature, the code throws “NoSuchMethodError” error at the runtime
+
+
+Cloning in Java:
+- It is process of making copy of an object.
+- This useful when u want to create a new object that has same prop of the existing object. Any modifications made to the cloned object will not affect original object.
+
+Types of clonning: Shallow copy and deep copy // need to see.
+
+
+
+How do exceptions affect the program if it doesn't handle them?
+Exceptions are runtime errors. Suppose we are making an android application with java.
+And it all works fine but there is an exceptional case when the application tries to get the file from storage and the file doesn’t exist (This is the case of exception in java).
+And if this case is not handled properly then the application will crash. This will be a bad experience for users.  
+This is the type of error that cannot be controlled by the programmer. But programmers can take some steps to avoid this so that the application won’t crash. 
+
+
+Is it mandatory for a catch block to be followed after a try block?
+No, it is not necessary for a catch block to be present after a try block. - A try block should be followed either by a catch block or by a finally block.
+
+
+ Can you call a constructor of a class inside the another constructor?
+Yes, the concept can be termed as constructor chaining and can be achieved using this().
+
 
 
 
