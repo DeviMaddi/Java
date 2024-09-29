@@ -59,3 +59,101 @@ Constructor Overloading -  It is the process of creating multiple constructors i
                         - Different constructors can provide default values for certain attributes while allowing specific values for others.
 
 
+Can the  main method be overlaoded in Java?
+- Yes, main method can be overloaded. 
+- Overloading occurs when two or more methods in the same class have the same name but different parameter lists (different types or numbers of parameters).
+- public class MainMethodOverloading {
+
+    public static void main(String[] args) {
+        System.out.println("Main method with String array");
+        main(5); // calling overloaded main method
+    }
+
+    public static void main(int number) {
+        System.out.println("Overloaded main method with int: " + number);
+    }
+
+    public static void main(String arg1, String arg2) {
+        System.out.println("Overloaded main method with two String arguments: " + arg1 + ", " + arg2);
+    }
+}
+The first main method takes a String[] as an argument, which is the standard signature required for the Java Virtual Machine (JVM) to start the program.
+
+
+Method Overloading
+Definition: Method overloading occurs when two or more methods in the same class have the same name but different parameter lists (different types or numbers of parameters).
+Overloading is resolved at compile time.  // return will be same.
+
+Method overriding is when a method in a subclass has the same name, return type, and parameters as a method in its superclass (parent class). 
+This happens when there is an inheritance relationship between the two classes.
+the subclass "overrides" the behavior of the method from the parent class, allowing it to give a more specific implementation.
+
+
+Final Keyword in Variable, method, Class:
+- final variable:
+When a variable is declared as final in Java, the value can’t be modified once it has been assigned.
+If any value has not been assigned to that variable, then it can be assigned only by the constructor of the class.
+
+- final method:
+A method declared as final cannot be overridden by its children's classes.
+A constructor cannot be marked as final because whenever a class is inherited, the constructors are not inherited. Hence, marking it final doesn't make sense.
+
+- final class:
+No classes can be inherited from the class declared as final. But that final class can extend other classes for its usage.
+
+
+
+When can we SUPER keyword in Java?
+- You can use super to call a method from the parent class that has been overridden in the child class.
+- You can use super() to call a constructor of the parent class from the child class constructor. This must be the first statement in the child class constructor.
+- If a child class has a variable with the same name as a variable in its parent class, you can use super to differentiate between them.
+
+
+Can the static methods be overloaded?
+Yes! There can be two or more static methods in a class with the same name but differing input parameters.
+
+
+Why is the main method static in Java?
+The main method is always static because static members are those methods that belong to the classes, not to an individual object. So if the main method will not be static then for every object, It is available.
+And that is not acceptable by JVM. JVM calls the main method based on the class name itself. Not by creating the object.
+Because there must be only 1 main method in the java program as the execution starts from the main method. So for this reason the main method is static. 
+
+
+Can the static methods be overridden?  // DATA HIDING
+- No Static methods cant be overridden.
+- Static methods belong to the class itself rather than to any specific instance of the class. 
+  When you call a static method, the version that gets executed is determined at compile time, based on the reference type, not at runtime like instance methods.
+
+
+Static Methods and Static variables are those methods and variables that belong to the class of the java program, not to the object of the class. 
+This gets memory where the class is loaded. And these can directly be called with the help of class names.
+For example - We have used mathematical functions in the java program like - max(), min(), sqrt(), pow(), etc. And if we notice that, 
+then we will find that we call it directly with the class name. Like - Math.max(), Math.min(), etc. So that is a static method. 
+
+Static classes - A class in the java program cannot be static except if it is the inner class. If it is an inner static class, then it exactly works like other static members of the class.
+
+ClassLoader in Java is responsible for loading classes into memory, allowing the JVM to find and use the classes required for executing a program.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is singleton class and how can we implement it ?
+- Singleton classes are those classes, whose objects are created only once. And with only that object the class members can be accessed. 
+
+
+String, String Builder, String Buffer:   - These are used to handle texts.
+- String - it is immutable, 
+
+
+
+            INTERFACE & ABSTRACT
+Availability of Methods: Only abstract methods (until Java 8, which allows default and static methods).	Can have both abstract methods (without a body) and concrete methods (with a body).
+Variable Types: 	Only static and final variables (constants) can be declared.	Can have static, non-static, final, and non-final variables.
+Inheritance: Supports multiple inheritance (a class can implement multiple interfaces).	Does not support multiple inheritance (a class can extend only one abstract class).
+Data Member Accessibility:	All members are public by default; cannot have private or protected members.	Can have protected, private, or public members.
+
+
+
+
+
+
+
