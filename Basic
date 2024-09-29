@@ -1,0 +1,61 @@
+Why Java Platform independent ?   -- write once, run anywhere
+ - Java language was developed so that it does not depend on any hardware or software because the compiler compiles the code and
+   then converts it to platform-independent byte code which can be run on multiple systems.
+   The only condition to run that byte code is for the machine to have a runtime environment (JRE) installed in it.
+
+Why Java not pure OPPS ?
+- Java is not considered a pure object-oriented programming (OOP) language because it includes elements that are not objects. 
+ -Specifically, Java uses primitive data types like int, char, boolean, float, etc., which are not objects and do not belong to any class. 
+ -  Java allows static methods, which are not associated with objects but with classes. 
+      In a purely OOP language, every function or method would be called on an object, not directly on a class.
+
+
+**Stack: Stores method details and local variables. It grows when you call methods and shrinks when methods finish.
+Heap: Stores objects created with new. The stack only holds the reference (pointer) to these objects, not the objects themselves.
+
+Difference between Java and C++
+1. Java is platform independent,  C ++ is platfrom dependent
+2. Java doesnot support goto statement, multiple inheritance, pointer,,,, where as C++ does
+3. Java allows OOPS model,  C++ allows both oops and procedural programming, in PP we write functions to perform tasks.
+4. Java is used for developing web and mob apps and also desktop apps, C++ maily used  for desktop app development.
+
+Difference between local variable and instance variable
+1. Instance variable = these var can be accessed by any method and they are declared outside the method and inside the class.
+2. Local Variable = these var are defined inside a method / block/ constructor, they are accessible within them.
+                     - Whenever a local variable is declared inside a method, the other class methods don’t have any knowledge about the local variable.
+
+What are default values assigned to the variables?
+- It depends on the data types , if it is reference then null, if it is a numeric, then 0, if it is a boolean then false.
+
+Data encapsulation in oops - it is important oops concept and it focuses on  hiding internal  details of an object , exposing only the necessary parts.
+                           - It helps protecting the data from unintendedd or harmful access.
+                           - The internal state (variables or data) of an object is kept private, meaning it cannot be accessed directly from outside the class.
+                           - To access or modify this private data, public methods (often called getters and setters) are provided. This allows controlled access to the data.
+
+
+difference between equals() method and equality operator (==) in Java?
+- == will check if two things are pointing to the same object in the memory
+- equals will check only the value or content.
+
+String a = new String("Hello");
+String b = new String("Hello");
+
+System.out.println(a == b); // false, because a and b are two different objects in memory  // a.equals(b) - true
+
+
+
+An infinite loop in Java is a loop that never stops running because the loop's exit condition is never met. 
+while (true) {
+    System.out.println("This is an infinite loop");
+}
+for (int i = 0; i >= 0; i++) {
+    System.out.println("This is an infinite loop");
+}
+
+
+Constructor Overloading -  It is the process of creating multiple constructors in the class consisting of the same name with a difference in the constructor parameters
+                        - Constructor overloading in Java allows you to create multiple constructors in a class to initialize objects in different ways.
+                        - To avoid code duplication, improving readability, 
+                        - Different constructors can provide default values for certain attributes while allowing specific values for others.
+
+
