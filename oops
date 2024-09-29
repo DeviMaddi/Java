@@ -1,0 +1,5 @@
+This: the this keyword in Java refers to the current instance of the class in which it is used.
+It helps differentiate between instance variables (attributes of the class) and parameters or local variables within methods or constructors. 
+It can also be used to call other constructors or pass the current object to another method.
+
+
