@@ -152,6 +152,99 @@ Inheritance: Supports multiple inheritance (a class can implement multiple inter
 Data Member Accessibility:	All members are public by default; cannot have private or protected members.	Can have protected, private, or public members.
 
 
+In Java, static as well as private method overriding is possible. Comment on the statement.
+The statement in the context is completely False. The static methods have no relevance with the objects, and these methods are of the class level.
+In the case of a child class, a static method with a method signature exactly like that of the parent class can exist without even throwing any compilation error.
+
+The phenomenon mentioned here is popularly known as method hiding, and overriding is certainly not possible. 
+Private method overriding is unimaginable because the visibility of the private method is restricted to the parent class only. 
+
+
+
+HashMap & TreeSet:
+- these are data strutures in java. They work in diff way and serve diff purpose.
+
+HashMap is like a dictionary in real life. It store data in form of key value pairs.
+- we can add, remove, find items by using label(key)
+HashMap<String, Integer> ages = new HashMap<>();
+        
+        // Adding key-value pairs
+        ages.put("John", 25);
+        ages.put("Alice", 30);
+        ages.put("Bob", 22);
+        
+        // Getting a value using a key
+        System.out.println(ages.get("Alice")); 
+
+A TreeSet is like a collection of items, but the items are automatically sorted in a specific order (usually ascending).
+- It only stores unique values, if you add any duplicate items, it will ignore.
+- TreeSet<Integer> numbers = new TreeSet<>();
+        
+        // Adding elements (TreeSet automatically sorts them)
+        numbers.add(10);
+        numbers.add(5);
+        numbers.add(20);
+        numbers.add(15);
+        
+        // The elements will be stored in sorted order
+        System.out.println(numbers); // Output: [5, 10, 15, 20]
+
+
+Feature	HashMap	TreeSet
+Stores:	Key-value pairs (like a dictionary),	Only unique values (sorted automatically)
+Order:	No specific order,	Sorted (usually in ascending order)
+Duplicate Keys/Values: 	No duplicate keys,	No duplicate values
+
+
+JVM: Runs Java bytecode on any machine.
+JRE: Contains the JVM and libraries required to run Java programs.
+JDK: Contains the JRE and development tools (like a compiler) for writing and developing Java programs.
+ d - r -v 
+
+What are the differences between HashMap and HashTable in Java?
+HashMap	HashTable
+HashMap is not synchronized thereby making it better for non-threaded applications.	HashTable is synchronized and hence it is suitable for threaded applications.
+Allows only one null key but any number of null in the values.	This does not allow null in both keys or values.
+
+Throw : 
+- to actually throw an exception
+- to manually trigger  an exception
+
+Throws:
+- The throws keyword is used in a method declaration to indicate that the method might throw an exception.
+It tells the calling method or user that this method might throw certain types of exceptions, and they should handle it.
+
+Constructor,	Method  Differences:
+Constructor is used for initializing the object state., 	Method is used for exposing the object's behavior.
+Constructor has no return type.,	Method should have a return type. Even if it does not return anything, return type is void.
+Constructor gets invoked implicitly., 	Method has to be invoked on the object explicitly.
+If the constructor is not defined, then a default constructor is provided by the java compiler.,  	If a method is not defined, then the compiler does not provide it.
+The constructor name should be equal to the class name.	, The name of the method can have any name or have a class name too.
+- 
+
+
+is-a relationship:
+It is fundamental concept in oops called inheritance.
+The "is-a" relationship indicates that a class (subclass or child class) inherits from another class (superclass or parent class).
+The child class inherits attributes and methods from the parent class, meaning it can use or override them.
+Example:
+
+For example, if you have a base class called Animal, and a subclass called Dog, you can say that a Dog is an Animal. This implies:
+Dog inherits properties (like name, age) and behaviors (like eat(), sleep()) from Animal.
+
+
+Which among String or String Buffer should be preferred when there are lot of updates required to be done in the data?
+StringBuffer is mutable and dynamic in nature whereas String is immutable. Every updation / modification of String creates a new String thereby overloading the string pool with unnecessary objects.
+Hence, in the cases of a lot of updates, 
+it is always preferred to use StringBuffer as it will reduce the overhead of the creation of multiple String objects in the string pool.
+
+
+Serialization in Java is the process of converting an object into a byte stream, which can then be easily saved to a file or sent over a network.
+- This allows you to persist the state of an object, enabling you to retrieve it later. 
+
+
+
+
 
 
 
